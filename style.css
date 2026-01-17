@@ -50,6 +50,11 @@ main>section {
     margin-top: 130px;
 }
 
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
 
 /* nav-bar related style  */
 
@@ -118,7 +123,7 @@ main>section {
     max-width: 537px;
 }
 
-.featur-title {
+.section-title {
     font-size: 2.8rem;
     font-weight: 700;
 }
@@ -132,6 +137,88 @@ main>section {
 }
 
 
+/* love-features */
+
+#features-section-title {
+    border-left: 5px solid rgba(255, 144, 14, 1);
+    padding-left: 21px;
+}
+
+.feature-card {
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.feature-card .feature-title {
+    font-weight: 600;
+    color: rgba(19, 19, 19, 1);
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.l-features {
+    display: flex;
+    gap: 140px
+}
+
+
+/* some-fact */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-description {
+    max-width: 540px;
+}
+
+.card {
+    border: 1px solid rgba(255, 144, 14, 1);
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.card-number {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+/* sponsor */
+
+.sponsor-info {
+    max-width: 540px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.sponsor-companies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-companies img {
+    filter: grayscale(100%);
+}
+
+
 /* responsive-media query */
 
 @media screen and (max-width:576px) {
@@ -140,10 +227,17 @@ main>section {
     .team {
         flex-direction: column;
     }
-    .team-img-container {
+    .team-img-container,
+    .container,
+    .sponsor-companies {
         grid-template-columns: repeat(1, 1fr);
     }
     .features {
         margin-left: 18px;
+    }
+    .container,
+    .sponsor-companies {
+        justify-items: center;
+        gap: 24px;
     }
 }
